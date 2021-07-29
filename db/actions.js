@@ -25,7 +25,7 @@ async function getCurrentPlayDate() {
 }
 async function getPlayersList(playDate) {
   const playersList = await PlayersList.find({ playDate });
-  return playersList.map(player => player.playerName);
+  return playersList.map((player) => player.playerName);
 }
 
 module.exports = { addNewPlayer, addNewCurrentPlayDate, getCurrentPlayDate, getPlayersList };
